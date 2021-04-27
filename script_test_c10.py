@@ -8,7 +8,7 @@ setting = sys.argv[3]
 name = sys.argv[4]
 
 dataroot = '--dataroot '
-dataroot += '/home/yu/datasets/'		# PLEASE EDIT THIS
+dataroot += './dataset/'		# PLEASE EDIT THIS
 
 if level == 0:
 	common_corruptions = ['cifar_new']
@@ -60,7 +60,7 @@ for corruption in common_corruptions:
 						dataroot,
 						gpnorm_tag,
 						none_tag,
-						'--grad_corr',
+#						'--grad_corr',
 						'--level 		%d' %(level),
 						'--corruption	%s' %(corruption),
 						'--shared 		%s' %(shared),

@@ -82,6 +82,7 @@ class ResNetCifar(nn.Module):
         x = self.conv1(x)
         x = self.layer1(x)
         x = self.layer2(x)
+        x = x.detach()
         x = self.layer3(x)
         x = self.bn(x)
         x = self.relu(x)

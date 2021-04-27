@@ -59,7 +59,7 @@ rdict = {'cls_initial': cls_initial, 'cls_correct': cls_correct, 'cls_losses': c
 			'ssh_initial': ssh_initial, 'ssh_correct': ssh_correct, 'ssh_losses': ssh_losses}
 torch.save(rdict, args.outf + '/%s_%d_inl.pth' %(args.corruption, args.level))
 
-if args.grad_corr:
-	corr = test_grad_corr(teloader, net, ssh, ext)
-	print('Average gradient inner product: %.2f' %(mean(corr)))
-	torch.save(corr, args.outf + '/%s_%d_grc.pth' %(args.corruption, args.level))
+#if args.grad_corr:
+#	corr = test_grad_corr(teloader, net, ssh, ext)
+#	print('Average gradient inner product: %.2f' %(mean(corr)))
+#	torch.save(corr, args.outf + '/%s_%d_grc.pth' %(args.corruption, args.level))
